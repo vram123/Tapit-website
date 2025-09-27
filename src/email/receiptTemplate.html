@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>TapIt Card – Order Confirmation</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f4f7fa;
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+    .container {
+      max-width: 650px;
+      margin: 20px auto;
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .header {
+      background: #0b0c10;
+      color: #fff;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    .header img {
+      height: 60px;
+      margin-bottom: 15px;
+    }
+    .confetti {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+    .content {
+      padding: 25px;
+    }
+    h1 {
+      color: #3a86ff;
+      font-size: 24px;
+      margin-top: 0;
+    }
+    .tagline {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    .order-summary {
+      margin: 20px 0;
+      background: #f0f4ff;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .order-summary p {
+      margin: 8px 0;
+      font-size: 15px;
+    }
+    .highlight {
+      font-weight: bold;
+      color: #000;
+    }
+    .socials {
+      margin: 20px 0;
+      text-align: center;
+      font-size: 24px;
+    }
+    .socials span {
+      margin: 0 10px;
+    }
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: #777;
+      padding: 15px;
+      border-top: 1px solid #ddd;
+      background: #fafafa;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <div class="confetti">🎉✨🎊</div>
+      <!-- Logo now points to local file in same folder -->
+      <img src="logo.png" alt="TapIt Logo" />
+      <h2>Thanks for your order, <strong>&lt;name&gt;</strong>!</h2>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+      <h1>Connecting has never been easier 🚀</h1>
+      <p class="tagline">
+        Thank you for trusting <strong>TapItCard.org</strong> and shopping with us.  
+        Not only are you getting the fastest way to connect, but you’re also helping us donate profits toward scholarships and good causes ❤️.
+      </p>
+
+      <div class="order-summary">
+        <p><span class="highlight">Order #:</span> &lt;order_number&gt;</p>
+        <p><span class="highlight">Date:</span> &lt;date&gt;</p>
+        <p><span class="highlight">Total:</span> $&lt;total&gt; (<em>owed within 24 hours if unpaid</em>)</p>
+      </div>
+
+      <p>
+        Be sure to check out our other TapIt NFC options:  
+        Tesla key cards 🔑🚗 (for way cheaper than Tesla),  
+        LinkedIn, GitHub, Linktree, personal websites 🌐, social media 📱,  
+        and even funny prank cards 🤡 to surprise your friends!
+      </p>
+
+      <div class="socials">
+        <span>💼 LinkedIn</span>
+        <span>💻 GitHub</span>
+        <span>🌐 Website</span>
+        <span>😂 Pranks</span>
+      </div>
+
+      <p>
+        Please send your payment within <strong>24 hours</strong> via your chosen method.  
+        We’ll notify you again once your order is ready for pickup or shipping 📦.
+      </p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>© 2025 TapItCard.org. All rights reserved.</p>
+      <p>Tap smart. Tap fast. TapIt 🚀</p>
+    </div>
+  </div>
+</body>
+</html>
