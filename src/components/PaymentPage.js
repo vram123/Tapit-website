@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import "./Payment.css";
 
 function PaymentPage() {
   const [formData, setFormData] = useState({
