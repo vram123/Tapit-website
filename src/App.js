@@ -1,11 +1,22 @@
 import React from "react";
-import PaymentPage from "./PaymentPage";
-import "./App.css";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Features from "./components/Features";
+import Pricing from "./components/Pricing";
+import Impact from "./components/Impact";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <>
-      <PaymentPage />
+      <Header />
+      <Hero />
+      <About />
+      <Features />
+      <Pricing />
+      <Impact />
+      <Footer />
     </>
   );
 }
