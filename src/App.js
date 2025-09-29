@@ -6,6 +6,7 @@ import Features from "./components/Features";
 import Pricing from "./components/Pricing";
 import Impact from "./components/Impact";
 import Footer from "./components/Footer";
+import PaymentPage from "./components/PaymentPage";
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
       <Pricing />
       <Impact />
       <Footer />
-    </>
+      <PaymentPage />
+      </>
   );
 }
 
