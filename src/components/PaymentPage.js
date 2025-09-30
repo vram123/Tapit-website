@@ -219,7 +219,10 @@ function PaymentPage() {
                 <> A $5 mailing fee will be added.</>
               )}
             </p>
-            <button className="btn ghost" onClick={() => navigate("/")}>
+            <button className="btn ghost" onClick={() => { 
+              setShowPopup(false); 
+              navigate("/"); 
+             }}>
               Close
             </button>
           </div>
