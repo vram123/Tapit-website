@@ -211,12 +211,12 @@ function PaymentPage() {
         <div className="popup-overlay">
           <div className="popup">
             <h2>Thank you for your order!</h2>
+            <h3><strong>Total:</strong> ${formData.numCards * 9.99}</h3>
             <p>
               Please send your payment within <strong>24 hours</strong> via{" "}
               {formData.paymentMethod}.  
-              <strong>Total:</strong> ${formData.numCards * 9.99}
               {formData.delivery === "Mail" && (
-                <><strong>Total:</strong> ${(formData.numCards * 9.99) + 5}</>
+                <> A $5 mailing fee will be added.</>
               )}
             </p>
             <button className="btn ghost" onClick={() => navigate("/")}>
