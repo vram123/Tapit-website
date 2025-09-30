@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 import "./Payment.css";
+import axios from "axios";
 
 function PaymentPage() {
   const [formData, setFormData] = useState({
     name: "",
-    phone: "",
+    phoneNumber: "",
     email: "",
     url: "",
     numCards: 1,
@@ -28,9 +30,16 @@ function PaymentPage() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setShowPopup(true);
+
+    try {
+      const response = await axios.post("https://tapit-server.onrender.com/api/order_complete", formData);
+
+    } catch (error) {
+      alert(error.response?.data?.message || "Something went wrong");
+    }
     // Later backend dev will hook into email/delivery logic
     console.log("Order submitted:", formData);
   };
@@ -56,8 +65,8 @@ function PaymentPage() {
           Phone Number
           <input
             type="tel"
-            name="phone"
-            value={formData.phone}
+            name="phoneNumber"
+            value={formData.phoneNumber}
             onChange={handleChange}
             required
           />

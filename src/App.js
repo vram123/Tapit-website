@@ -9,6 +9,8 @@ import Impact from "./components/Impact";
 import Footer from "./components/Footer";
 import PaymentPage from "./components/PaymentPage";
 import Main from "./components/MainPage";
+import CardAndPhone from "./components/CardAndPhone";
+
 
 export default function App() {
   return (

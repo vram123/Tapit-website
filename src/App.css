@@ -66,3 +66,53 @@ img { max-width: 100%; height: auto; display: block; }
 .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
 .footer-inner .brand { display: inline-flex; align-items: center; gap: 8px; font-weight: 800; }
 .footer-inner .legal { display: grid; gap: 4px; color: var(--muted); font-size: 12px; }
+
+
+.scene-wrapper {
+  position: relative;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  perspective: 1200px; 
+}
+
+.phone {
+  width: 300px;
+  transition: transform 0.2s linear;
+  transform-origin: right center; 
+}
+
+.card1 {
+  width: 220px;
+  height: 320px;
+  transition: transform 0.2s linear;
+  transform-style: preserve-3d;
+  border-radius: 20px;
+  overflow: hidden;
+  transform-origin: left center; 
+}
+
+.popup-cloud {
+  position: absolute;
+  top: 20%;
+  background: white;
+  color: black;
+  font-weight: bold;
+  padding: 14px 22px;
+  border-radius: 50px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

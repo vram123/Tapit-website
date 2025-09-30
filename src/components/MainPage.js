@@ -1,23 +1,46 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import "./../App.css";
+import "./CardAndPhone.js";
+import "./CardAndPhone.css";
+import React, { useEffect, useState } from "react";
+
 
 function Main() {
+   const [scrollPos, setScrollPos] = useState(0);
+      const [connected, setConnected] = useState(false);
+      useEffect(() => {
+      const handleScroll = () => {
+        const y = window.scrollY;
+        setScrollPos(y);
+  
+        if (y > 250) {
+          setConnected(true);
+        } else {
+          setConnected(false);
+        }
+      };
+  
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+  
+    const progress = Math.min(scrollPos / 600, 1); // 0 → 1
+  
   return (
-<html lang="en">
+    <>
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TapIt — Tap, Connect, Done.</title>
   <meta name="description" content="TapIt NFC cards: the fastest way for students and recruiters to connect. Add phone, social, LinkedIn, resume, GitHub—exchange details on the spot. Just $10. 100% of profits fund student scholarships." />
-  <link rel="preload" href="/assets/logo.png" as="image" />
+  <link rel="preload" href="/logo.jpg" as="image" />
   <link rel="stylesheet" href="/css/styles.css" />
-  <link rel="icon" href="/assets/logo.png" type="image/png" />
+  <link rel="icon" href="/logo.jpg" type="image/png" />
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <img src="/assets/logo.png" alt="TapIt logo" class="logo" />
+      <img src="/logo.jpg" alt="TapIt logo" class="logo" />
       <nav class="nav">
         <a href="#about">About</a>
         <a href="#features">Features</a>
@@ -44,6 +67,31 @@ function Main() {
         </div>
       </div>
     </section>
+        <div className="scene-wrapper">
+      {/* Phone */}
+      <img
+        src="/phone-hand.png"
+        alt="Phone in hand"
+        className="phone"
+        style={{
+          transform: `translateX(${-(1 - progress) * 300}px) rotateY(${progress * -90}deg)`
+        }}
+      />
+
+      {/* TapIt Card */}
+      <div
+        className="card1"
+        style={{
+          transform: `translateX(${(1 - progress) * 300}px) rotateY(${progress * 90}deg)`
+        }}
+      >
+        <div className="card-shine"></div>
+        <span className="card-text">TapIt</span>
+      </div>
+
+      {/* Connected Popup */}
+      {connected && <div className="popup-cloud">✅ Connected</div>}
+    </div>
 
     <section id="about" class="section">
       <div class="container grid two">
@@ -124,7 +172,7 @@ function Main() {
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="brand">
-        <img src="/assets/logo.png" alt="TapIt logo small" class="logo sm" />
+        <img src="/logo.jpg" alt="TapIt logo small" class="logo sm" />
         <span>TapIt</span>
       </div>
       <div class="legal">
@@ -136,7 +184,7 @@ function Main() {
 
   <script src="/js/main.js"></script>
 </body>
-</html>
+</>
   );
 }
 

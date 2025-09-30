@@ -1,0 +1,81 @@
+.scene-wrapper {
+    position: relative;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    perspective: 1200px; 
+  }
+
+
+  .phone {
+    width: 300px;
+    transition: transform 0.2s linear;
+    transform-origin: right center; 
+  }
+
+
+  .card1 {
+    width: 220px;
+    height: 320px;
+    border-radius: 20px;
+    background: linear-gradient(145deg, #000000, #1a1a1a); 
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s linear;
+    transform-style: preserve-3d;
+    transform-origin: left center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  }
+
+  .card-shine {
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255,255,255,0.3), transparent);
+    transform: skewX(-25deg);
+    animation: shine 3s infinite;
+  }
+
+  @keyframes shine {
+    0% { left: -75%; }
+    50% { left: 125%; }
+    100% { left: 125%; }
+  }
+
+  .card-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 2px;
+  }
+
+
+  .popup-cloud {
+    position: absolute;
+    top: 20%;
+    background: white;
+    color: black;
+    font-weight: bold;
+    padding: 14px 22px;
+    border-radius: 50px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    animation: fadeInUp 0.6s ease forwards;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px) scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
