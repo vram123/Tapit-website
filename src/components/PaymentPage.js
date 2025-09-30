@@ -5,6 +5,7 @@ import "./Payment.css";
 import axios from "axios";
 
 function PaymentPage() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
     phoneNumber: "",
@@ -213,11 +214,12 @@ function PaymentPage() {
             <p>
               Please send your payment within <strong>24 hours</strong> via{" "}
               {formData.paymentMethod}.  
+              <strong>Total:</strong> ${formData.numCards * 9.99}
               {formData.delivery === "Mail" && (
-                <> A $5 mailing fee will be added.</>
+                <><strong>Total:</strong> ${(formData.numCards * 9.99) + 5}</>
               )}
             </p>
-            <button className="btn ghost" onClick={() => setShowPopup(false)}>
+            <button className="btn ghost" onClick={() => navigate("/")}>
               Close
             </button>
           </div>
