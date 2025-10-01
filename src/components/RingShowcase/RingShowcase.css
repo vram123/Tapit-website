@@ -1,0 +1,199 @@
+/* Background */
+.ring-page {
+    background: linear-gradient(to bottom, #0b0c10, #111217, #0b0c10);
+    color: #fff;
+    min-height: 200vh;
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  }
+  
+  /* Hero Section */
+  .ring-hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Glowing Ring */
+  .ring {
+    width: 220px;
+    height: 220px;
+    border: 16px solid #00ff95;
+    border-radius: 50%;
+    box-shadow: 0 0 40px rgba(0, 255, 149, 0.9), 0 0 80px rgba(0, 255, 149, 0.6);
+    animation: pulse 2s infinite alternate;
+  }
+  
+  @keyframes pulse {
+    from { box-shadow: 0 0 30px rgba(0,255,149,0.6); }
+    to { box-shadow: 0 0 70px rgba(0,255,149,1); }
+  }
+  
+  /* Phone */
+  .phone {
+    width: 260px;
+    height: 480px;
+    border-radius: 36px;
+    background: #000;
+    border: 3px solid #333;
+    box-shadow: inset 0 0 20px rgba(255,255,255,0.05),
+                0 12px 40px rgba(0,0,0,0.6);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Popup above phone */
+  .popup {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #00ff95;
+    color: #000;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    font-size: 1rem;
+  }
+  
+  .popup img {
+    width: 22px;
+    height: 22px;
+  }
+  
+  /* Notification inside phone */
+  .phone-notif {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #1d222f;
+    color: #fff;
+    font-size: 0.95rem;
+    padding: 14px 20px;
+    border-top: 1px solid #333;
+    box-shadow: 0 -2px 12px rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    border-radius: 0 0 20px 20px;
+  }
+  
+  .phone-notif img {
+    width: 22px;
+    height: 22px;
+  }
+  
+  /* Pricing */
+  .pricing {
+    text-align: center;
+    padding: 80px 20px;
+  }
+  
+  .pricing h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .pricing p {
+    font-size: 1.1rem;
+    color: #aaa;
+    margin-bottom: 2rem;
+  }
+  
+  .pricing-box {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .price-option {
+    background: #161823;
+    border-radius: 12px;
+    padding: 1rem 2rem;
+    text-align: center;
+    flex: 1;
+    border: 1px solid #222;
+    max-width: 200px;
+  }
+  
+  .price-option h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .price-option p {
+    font-size: 1rem;
+    color: #aaa;
+  }
+  
+  .price-option .free {
+    color: #00ff95;
+    font-weight: bold;
+  }
+  
+  .add-to-cart {
+    background: #00ff95;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+  }
+  
+  .add-to-cart:hover {
+    background: #00cc7a;
+    transform: scale(1.05);
+  }
+  
+  /* Ring Collection */
+  .ring-collection {
+    padding: 100px 20px;
+    text-align: center;
+  }
+  
+  .ring-collection h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .ring-collection p {
+    color: var(--muted);
+    margin-bottom: 2rem;
+  }
+  
+  /* Diagonal rings */
+  .ring-diagonal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    position: relative;
+  }
+  
+  .color-ring {
+    width: 100px;
+    height: 100px;
+    border: 10px solid;
+    border-radius: 50%;
+    position: relative;
+  }
+  
+  .connect-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+  }
+  
