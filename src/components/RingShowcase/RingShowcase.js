@@ -94,7 +94,7 @@ export default function RingShowcase() {
                 whileInView={{ opacity: 1 }}
                 transition={{ delay: i * 0.15 }}
               >
-                🔗
+                
               </motion.span>
             </motion.div>
           ))}
